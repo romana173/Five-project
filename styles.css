@@ -1,0 +1,368 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Slabo+27px&display=swap');
+:root{
+--font-family: 'Pacifico', cursive;
+--font-family: 'Slabo 27px', serif;
+--bg-grey:rgb(248, 246, 246);
+--head-white:white;
+}
+*{
+    box-sizing: border-box;
+}
+.container{
+    max-width:1440px;
+    margin: 0 auto;
+    background-color: var(--bg-grey);
+    font-family: 'Slabo 27px', serif;
+}
+.header{
+    display: flex;
+    background-color:var(--head-white);
+    width: 100%;
+    justify-content: space-between;
+    padding:30px;
+    box-shadow: 0 3px 10px rgb(197, 197, 197);
+    position: relative;
+}
+.logo{
+    font-family: 'Pacifico', cursive;
+    font-size: 30px;
+}
+.log-reg{
+    font-family: 'Slabo 27px', serif;
+    color: grey;
+    font-size: 15px;
+}
+.fav{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.fav-icon{
+    width:20px;
+    height:20px;
+}
+.nav{
+    display: flex;
+    gap:30px;
+    align-items: center;
+    font-weight: 600;
+    cursor: pointer;
+}
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+   
+  }
+  
+  .hover-underline-animation:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    top:16px;
+    left: 0;
+    background-color: 
+  #ca0000;
+    transform-origin: left right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .hover-underline-animation:hover:after {
+    transform: scaleX(1);
+    transform-origin: right left;
+  }
+  .red-line{
+    border-bottom:2px solid #ca0000;
+  }
+  #overlay {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s linear;
+  }
+  
+  #overlay.active {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+  #burger {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #17141d;
+    padding: 1rem;
+    z-index: 1000;
+    cursor: pointer;
+    transition: 0.3s linear;
+    box-shadow: 2px 2px 5px #17141d;
+  }
+  
+  #burger:hover {
+    background-color: goldenrod;
+  }
+  
+  .line {
+    width: 22px;
+    margin-bottom: 5px;
+    height: 2px;
+    background-color: white;
+  }
+  
+  .line:last-child {
+    margin-bottom: 0;
+  }
+  
+  #nav {
+    height: 100vh;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #17141d;
+    color: white;
+    position: fixed;
+    right: 0;
+    transform: translateX(100%);
+    transition: transform 0.3s linear;
+    margin-left: 200px;
+  }
+  
+  #nav.active {
+    transform: translateX(0);
+  }
+  
+  ul {
+    list-style: none;
+    text-align: center;
+  }
+  
+  li {
+    text-transform: uppercase;
+    font-size: 2rem;
+    letter-spacing: 3px;
+    line-height: 1.6;
+  }
+  
+  .text {
+    width: 80%;
+    text-align: center;
+    line-height: 1.8;
+    letter-spacing: 3px;
+  }
+  
+  h1 {
+    margin-bottom: 3rem;
+  }
+  
+  a {
+    color: #fafafa;
+    transition: 0.3s linear;
+  }
+  
+  i {
+    margin: 2rem;
+  }
+  
+  a:hover {
+    color: goldenrod;
+    outline: none;
+  }
+  
+ #overlay{
+  display: none;
+ }
+ 
+ @media(max-width:970px){
+    .nav{
+        display: none;
+    }
+    .fav{
+        display: none;
+    }
+    #overlay{
+        display: block;
+    }
+ }
+.conainer2{
+  max-width: 1440px;
+  margin-top:10px;
+  display: flex;
+  gap:10px;
+  
+ 
+}
+ .first-box{
+  width: 170%;
+  display: flex;
+  justify-content: space-between;
+  padding-left:50px;
+  background-color: #ffd4ec;
+ }
+ .first-box-texts{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+ 
+ }
+.womens-fashion{
+  font-family: 'Pacifico', cursive;
+  font-size: 30px;
+  margin-bottom:40px;
+  
+}
+.article{
+  margin-bottom:30px;
+  font-size: 17px;
+  color: grey;
+}
+.shop-now{
+  font-weight: 700;
+  height:20px;
+  max-width: 80px;
+  cursor: pointer;
+  border-bottom:1px solid red;
+}
+.model-img{
+  width:40%;
+  height: 70%;
+ object-fit: cover;
+}
+.second-container-boxes{
+  display: flex;
+  flex-wrap: wrap;
+  gap:10px;
+}
+.box{
+  width:49.3%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.box:nth-child(1){
+  background-color: rgb(186, 207, 207);
+}
+.box:nth-child(2){
+  background-color: rgb(228, 184, 228);
+}
+.box:nth-child(3){
+  background-color: #ffe5f3;
+}
+.box:nth-child(4){
+  background-color: #d3eaff;
+}
+.article-text{
+  display: flex;
+  flex-direction: column;
+ 
+}
+.box .article-text .womens-fashion{
+  font-size: 20px;
+}
+.box .article{
+  color: grey;
+}
+.model1-img{
+  width: 60%;
+  height: 80%;
+}
+@media(max-width:1317px){
+.first-box{
+  width: 100%;
+ }
+ .conainer2{
+  display: flex;
+  flex-wrap: wrap;
+ }
+}
+@media(max-width:712px){
+  .box{
+    width:100%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+
+.container3{
+  max-width: 1000px;
+  margin:40px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  font-family: 'Slabo 27px', serif;
+  padding: 0 10px;
+}
+.container-3-cat{
+  display: flex;
+  gap:30px;
+}
+.new-products{
+  font-size: 25px;
+  font-weight: 700;
+  max-width: 200px;
+  margin-top:30px;
+  
+}
+.border-new-products{
+  margin-top: -10px;
+  border-bottom:2px solid red;
+  width: 60px;
+  height: 20px;
+}
+.border-all{
+  border-bottom: 2px solid red;
+}
+.container-3-cat p{
+  color: grey;
+  cursor: pointer;
+}
+.container-3-boxes{
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap:30px;
+  justify-content: center;
+}
+.container-3-box-model{
+  max-width: 220px;
+  position: relative;
+}
+.cont3-imgs{
+  width:100%;
+  height: 100%;
+  object-fit: cover;
+}
+@media(max-width:709px){
+  
+.container3{
+flex-direction: column;
+align-items: flex-start;
+}
+.border-new-products{
+  margin-top: -10px;
+  border-bottom:2px solid red;
+  width: 60px;
+  height: 20px;
+  margin-bottom:30px;
+}
+.container-3-cat{
+  display: flex;
+  gap:15px;
+}
+}
+.star{
+  max-width: 10px;
+  max-height: 64px;
+ 
+}
+.container-3-box-model p{
+  font-family:'Slabo 27px', serif;
+  font-weight: 400;
+}
